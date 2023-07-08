@@ -200,9 +200,6 @@ form{
       padding: 0 15px 0 15px;
       transition: .25s;
   }
-  #normnav a:hover{
-      color:#f77775;
-  }
   #name{
       display: block;
       border: 2px solid #f77775;
@@ -222,4 +219,8 @@ form{
   .formInput{
       width: 400px;
   }
+}
+
+.home{
+  text-align: center;
 }

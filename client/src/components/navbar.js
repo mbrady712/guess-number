@@ -6,15 +6,15 @@ export const Navbar = () => {
 
     return (
         <div className="navbar">
-            <nav class="nav-section">
+            <nav className="nav-section">
                 <div id="mobnav">
-                    <input class="checkbox" type="checkbox"/>
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
+                    <input className="checkbox" type="checkbox"/>
+                    <div className="hamburger-lines">
+                        <span className="line line1"></span>
+                        <span className="line line2"></span>
+                        <span className="line line3"></span>
                     </div>  
-                    <div class="menu-items">
+                    <div className="menu-items">
                         <Link to="/">Home</Link>
                         <Link to="/login">Login</Link>
                     </div>
