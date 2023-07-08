@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: red;
+  animation-name: colorChange;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Color pallete from https://digitalsynopsis.com/design/beautiful-color-palettes-combinations-schemes/
+Pastel Rainbow*/
+@keyframes colorChange {
+  0% {background-color: #a8e6cf;}
+  16% {background-color: #dcedc1;}
+  32% {background-color: #ffd3b6;}
+  48% {background-color: #ffaaa5;}
+  80% {background-color: #ff8b94;}
+  100% {background-color: #a8e6cf;}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar{
+  text-align: right;
 }
