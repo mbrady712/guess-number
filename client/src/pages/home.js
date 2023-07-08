@@ -1,25 +1,42 @@
 import { useState } from "react";
 export const Home = () => {
 
+    const ans = Math.floor(Math.random() * 100 + 1);
+    console.log(ans);
+
     const [guesses, setGuesses] = useState([]);
 
     const handleKeyPress = (event) => {
+
         var feedback = "";
-        var guess;
-        if(event.key === 'Enter' && guesses.length <= 3){
-            guess = event.target.value;
-            console.log(guess);
-            setGuesses([
-                ...guesses, 
-                { feedback: feedback, guess: guess }])
-        }
-        if(guesses.length > 3){
-            feedback = "Game Over";
-            guess = event.target.value;
-            console.log(guess);
-            setGuesses([
-                ...guesses, 
-                { feedback: feedback, guess: guess }])
+        if(event.key === 'Enter'){
+            var guess = event.target.value;
+            //if answer is not correct and there are still more turns
+            if(guesses.length <= 3 && guess != ans){
+                if(guess < ans){
+                    feedback = "Your guess was too low.";
+                }else{
+                    feedback = "Your guess was too high.";
+                }
+                setGuesses([
+                    ...guesses, 
+                    { feedback: feedback, guess: guess }]);
+            }
+            //if asnwer is not correct and there are no more turns
+            if(guesses.length > 3 && guess != ans){
+                feedback = "Game Over. You're out of tries.";
+                setGuesses([
+                    ...guesses, 
+                    { feedback: feedback, guess: guess }]);
+            }
+            //if asnwer is correct
+            if(guess == ans){
+                feedback = "You win! Game Over";
+                setGuesses([
+                    ...guesses, 
+                    { feedback: feedback, guess: guess }]);
+            }
+            event.target.value = "";
         }
     }
 
