@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
-    const navigate = useNavigate();
 
     return (
         <div className="navbar">
@@ -17,11 +15,15 @@ export const Navbar = () => {
                     <div className="menu-items">
                         <Link to="/">Home</Link>
                         <Link to="/login">Login</Link>
+                        <Link to="/leaderboard">Leaderboard</Link>
+                        <Link to="/stats">Your Stats</Link>
                     </div>
                 </div>
                 <div id="normnav">
                     <Link to="/">Home</Link>
                     <Link to="/login">Login</Link>
+                    <Link to="/leaderboard">Leaderboard</Link>
+                    <Link to="/stats">Your Stats</Link>
                 </div>
             </nav>
         </div>
