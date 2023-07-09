@@ -42,3 +42,4 @@ public/
 
 #Exlcude .txt files
 *.txt
+*.env
