@@ -14,14 +14,14 @@ export const Navbar = () => {
                     </div>  
                     <div className="menu-items">
                         <Link to="/">Home</Link>
-                        <Link to="/login">Login</Link>
+                        <Link to="/auth">Login</Link>
                         <Link to="/leaderboard">Leaderboard</Link>
                         <Link to="/stats">Your Stats</Link>
                     </div>
                 </div>
                 <div id="normnav">
                     <Link to="/">Home</Link>
-                    <Link to="/login">Login</Link>
+                    <Link to="/auth">Login</Link>
                     <Link to="/leaderboard">Leaderboard</Link>
                     <Link to="/stats">Your Stats</Link>
                 </div>
